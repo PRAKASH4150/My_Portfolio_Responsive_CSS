@@ -422,7 +422,7 @@ body {
     }
 
     #experience #workinfo #company {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     #experience #workinfo .subtags {
@@ -480,7 +480,7 @@ body {
     }
 
     .projectname {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .projectdescription {
@@ -508,7 +508,7 @@ body {
     }
 
     #education .eduinfo .school {
-        font-size: var(--content_font_size_mobileversion);
+        font-size:45px;
     }
 
     #education .eduinfo .subtags {
