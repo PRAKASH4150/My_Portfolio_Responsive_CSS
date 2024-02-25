@@ -3,7 +3,9 @@
     --white: white;
     --lightpink: #E1D5E7;
     --logo_font_size: 25px;
+    --logo_font_size_mobileversion:40px;
     --nav_font_size: 20px;
+    --nav_font_size_mobileversion:30px;
     --section_heading_font_size: 25px;
     --sections_padding: 5px;
     --resume_button_bg_color: #CC0066;
@@ -35,16 +37,16 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-#navigation {
+.mainnav {
     grid-area: navigation;
     background-color: var(--black);
     margin: 0%;
+    text-align: right;
 
 }
 
-#navigation a {
-    float: right;
-    display: block;
+.mainnav a {
+    display:inline-block;
     color: var(--white);
     text-decoration: none;
     padding: 15px;
@@ -53,18 +55,21 @@ body {
 
 }
 
-#navigation .logo {
+.mainnav .logo {
     float: left;
     font-weight: bolder;
     font-size: var(--logo_font_size);
 }
 
-#navigation a:hover {
+.mainnav a:hover {
     background-color: var(--lightpink);
     color: var(--black);
     font-weight: bolder;
 }
 
+.mainnav .icon{
+    display: none;;
+}
 .sectionheading {
     text-align: center;
     font-weight: bold;
@@ -319,7 +324,7 @@ body {
         grid-template-rows: auto;
     }
 
-    .mainnav a:not(:first-child) {
+    .mainnav a:not(.logo) {
         display: none;
     }
 
@@ -350,7 +355,13 @@ body {
         text-align: left;
     }
 
-
+    .mainnav .logo {
+        font-size: var(--logo_font_size_mobileversion);
+    }
+    .mainnav a {
+        font-size: var(--nav_font_size_mobileversion);
+    
+    }
     #aboutme {
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
