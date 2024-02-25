@@ -1,11 +1,20 @@
-function myFunction() {
-    console.log("Entered");
-    var x = document.getElementById("navigation");
-    if (x.className === "mainnav") {
-        console.log("Entered2");  
-      x.className += " responsive";
+function responsiveMenu() {
+    var element = document.getElementById("navigation");
+    if (element.className === "mainnav") {
+        element.className += " responsive";
     } else {
-        console.log("Entered3");
-      x.className = "mainnav";
+        element.className = "mainnav";
     }
   }
+
+
+function downloadResume()
+{
+    var docPath="./files/Resume.pdf";
+    var link=document.createElement('a');
+    link.href=docPath;
+    link.download='Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
