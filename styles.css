@@ -7,7 +7,7 @@
     --logo_font_size_mobileversion:40px;
     --nav_font_size: 20px;
     --nav_font_size_mobileversion:30px;
-    --section_heading_font_size: 25px;
+    --section_heading_font_size: 35px;
     --sections_padding: 5px;
     --resume_button_bg_color: #D36135;
     --font_family: "Alegreya Sans", serif;
@@ -15,7 +15,10 @@
     --section_padding_mobileversion: 25px;
     --content_font_size_mobileversion: 30px;
     --line-height_mobileversion: 50px;
-    --subtags_font_size: 30px;
+    --subtags_font_size:25px;
+    --section_main_content_size:28px;
+    --section_main_content_size_mobileversion:45px;
+    --content_font_size:20px;
 }
 
 body {
@@ -74,15 +77,16 @@ body {
 }
 .sectionheading {
     text-align: center;
-    font-weight: bold;
+    font-weight:lighter;
     font-size: var(--section_heading_font_size);
+    margin-top:10px;
+    margin-bottom:20px;
 }
 
 #aboutme .sectionheading,
 #projects .sectionheading {
     position: relative;
     left: 50%;
-    font-weight: bold;
 }
 
 #photocontainer .imagebuttonholder,
@@ -113,7 +117,7 @@ body {
 
 
 #photocontainer .imagebuttonholder #userimage {
-    width: 40%;
+    width: 50%;
 }
 
 #photocontainer .imagebuttonholder #downloadresume {
@@ -121,7 +125,7 @@ body {
     color: var(--white);
     font-family: var(--font_family);
     font-weight: bold;
-    font-size: 20px;
+    font-size: var(--content_font_size);
     text-align: center;
     border-radius: 5px;
     padding: 5px;
@@ -140,13 +144,13 @@ body {
 }
 
 #contentcontainer #introbox #hello {
-    font-size: 25px;
+    font-size: var(--content_font_size);
     font-weight: bold;
     margin: 0%;
 }
 
 #contentcontainer #introbox #name {
-    font-size: 40px;
+    font-size: var(--section_main_content_size);
     font-weight: bolder;
     margin: 0%;
     margin-top: 20px;
@@ -154,7 +158,7 @@ body {
 }
 
 #contentcontainer #introbox #content {
-    font-size: 20px;
+    font-size: var(--content_font_size);
     text-align: justify;
     line-height: 27px;
     margin: 0%;
@@ -179,7 +183,7 @@ body {
 }
 
 #experience #workinfo #company {
-    font-size: 30px;
+    font-size: var(--section_main_content_size);
     font-weight: bold;
     margin-bottom: 0px;
 }
@@ -190,7 +194,7 @@ body {
 }
 
 #experience #workinfo #reponsibilites {
-    font-size: 20px;
+    font-size: var(--content_font_size);
     text-align: justify;
     line-height: 27px;
 }
@@ -204,7 +208,8 @@ body {
 #skills .skillcontainer .skill-img {
     width: 100px;
     height: 100px;
-    padding-right: 80px;
+    padding-left: 50px;
+    padding-right:50px;
     padding-bottom: 30px;
 }
 
@@ -246,14 +251,14 @@ body {
 }
 
 .projectname {
-    font-size: 30px;
+    font-size: var(--section_main_content_size);
     font-weight: bold;
     margin-bottom: 0px;
     text-align: center;
 }
 
 .projectdescription {
-    font-size: 20px;
+    font-size: var(--content_font_size);
     text-align: justify;
     line-height: 22px;
 }
@@ -265,7 +270,7 @@ body {
 }
 
 #acievementdesc {
-    font-size: 20px;
+    font-size: var(--content_font_size);
     text-align: justify;
     line-height: 22px;
 }
@@ -282,13 +287,14 @@ body {
 }
 
 #education .eduinfo .school {
-    font-size: 30px;
+    font-size:var(--content_font_size);
     font-weight: bold;
     margin-bottom: 0px;
 }
 
 #education .eduinfo .subtags {
     font-size: 18px;
+    text-align: justify;
 }
 
 #contactme {
@@ -306,7 +312,8 @@ body {
 #contactcenter .contact-icon {
     width: 30px;
     height: 30px;
-    padding-right: 30px;
+    padding-right:15px;
+    padding-left:15px;
     padding-bottom: 5px;
 }
 
@@ -365,7 +372,7 @@ body {
     }
 
     .sectionheading {
-        font-size: 40px;
+        font-size:60px;
         margin: 10px;
     }
     
@@ -408,11 +415,11 @@ body {
     }
 
     #contentcontainer #introbox #hello {
-        font-size: 40px;
+        font-size: var(--content_font_size_mobileversion);
     }
 
     #contentcontainer #introbox #name {
-        font-size: 60px;
+        font-size:var(--section_main_content_size_mobileversion);
     }
 
     #contentcontainer #introbox #content {
@@ -421,7 +428,7 @@ body {
     }
 
     #contentcontainer #introbox #email {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #experience {
@@ -434,13 +441,17 @@ body {
     }
 
     #experience #workinfo #company {
-        font-size: 45px;
+        font-size: var(--section_main_content_size_mobileversion);
     }
 
     #experience #workinfo .subtags {
-        font-size: var(--subtags_font_size);
+        font-size:var(--subtags_font_size);
     }
 
+    #experience #workinfo .subtags span{
+        display: block;
+        line-height:30px;
+    }
     #experience #workinfo #reponsibilites {
         font-size: var(--content_font_size_mobileversion);
         line-height: var(--line-height_mobileversion);
@@ -520,12 +531,17 @@ body {
     }
 
     #education .eduinfo .school {
-        font-size:45px;
+        font-size:var(--content_font_size_mobileversion);
     }
 
     #education .eduinfo .subtags {
         font-size: var(--content_font_size_mobileversion);
     }
+    #education .eduinfo .subtags span {
+        display: block;
+        line-height:55px;
+    }
+
 
     #contactme {
         padding: var(--section_padding_mobileversion);
